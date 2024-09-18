@@ -10,5 +10,9 @@
     "transform": {
       "^.+\\.jsx?$": "babel-jest",
       "^.+\\.svg$": "jest-transformer-svg"
-    }
+    },
+    "testPathIgnorePatterns": [
+        "/node_modules/",
+        "/__tests__/"
+      ]
 }
