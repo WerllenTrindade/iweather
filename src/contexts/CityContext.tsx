@@ -28,7 +28,7 @@ export function CityProvider({ children }: CityContextProviderProps) {
     setCityIsLoading(false);
   }
 
-  useEffect(() => {
+  useEffect(() => {                 
     setCityIsLoading(true);
 
     getStorageCity()

@@ -4,11 +4,10 @@ import { getCityByNameService } from "./getCityByNameService";
 
 describe('API: getCityByNameService', () => {
     it("shout return city details", async () => {
-        
-        jest.spyOn(api, "get").mockResolvedValue({mockCityAPIResponse});
+        jest.spyOn(api, "get").mockResolvedValue({ data: mockCityAPIResponse });
 
-        const response = await getCityByNameService("São paulo");
-        console.log(response)
-        // expect(response).toEqual(mockCityAPIResponse);
+        const response = await getCityByNameService("São Paulo");
+        expect(response).toBeDefined();
+        expect(response.length).toBeGreaterThan(0);
     })
 })
