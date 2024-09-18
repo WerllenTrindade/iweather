@@ -24,8 +24,7 @@ describe('Componente: SelectList', () => {
       render( <SelectList data={[]} onChange={() => {}} onPress={() => {}}/> )
       
       const options = screen.getByTestId("options");
-
-      expect(options.length).toHaveLength(0);
+      expect(options.props.children).toHaveLength(0);
   })
 })
 
